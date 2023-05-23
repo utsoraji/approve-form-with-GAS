@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <h1><?=subject ?> 承認依頼</h1>
+    <p>依頼者: <?=laboName ?> <?=clientName ?> (<a href="mailto:<?=clientMail ?>"><?=clientMail ?></a>)</p>
+    <p>依頼日時: <?=date ?></p>
+    <h3>添付ファイル</h3>
+    <ul>
+      <?!=fileList ?>
+    </ul>
+    <p><?=description ?></p>
+    <!-- <p>担当者:<?=pic ?> (<a href="mailto:<?=picMail ?>"><?=picMail ?></a>)</p> -->
+    <?!=approveForm ?>
+
+    <iframe
+      title="Decision Log"
+      width="90%"
+      height="200"
+    src="https://docs.google.com/spreadsheets/d/<?=logSheet ?>/gviz/tq?tq=<?=logQuery ?>&tqx=out:html">
+    </iframe>
+  </body>
+</html>

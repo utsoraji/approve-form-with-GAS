@@ -1,0 +1,8 @@
+<hr />
+<form action="<?=appUrl ?>" method="POST">
+  <label for="comment">コメント：</label><br />
+  <textarea style="width:25em;height:10em" name="comment" id="comment"><?=comment ?></textarea><br />
+  <input type="hidden" name="id" value="<?=id ?>">
+  <button style="background: lightskyblue;margin-right:10em;" type=“submit” name="decision" value="accept">承認</button>
+  <button style="background: pink;" type=“submit” name="decision" value="reject">否認</button>
+</form>
